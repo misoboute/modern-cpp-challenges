@@ -1,7 +1,7 @@
 include_directories(${MODCPPCHAL_REPO_ROOT}/include)
 
 set(SOURCES
-    math.cpp
+    mathutils.cpp
 )
 
 add_library(math ${SOURCES})

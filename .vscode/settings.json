@@ -1,7 +1,11 @@
 {
     "cmake.configureArgs": [
         "-DCMAKE_PREFIX_PATH=/usr/local/swissmeda",
-        "-DCMAKE_OSX_ARCHITECTURES=x86_64"
+        "-DCMAKE_OSX_ARCHITECTURES=x86_64",
+        "-DCMAKE_OSX_SYSROOT=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk"
     ],
-    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "[Log]": {
+        "editor.wordWrap": "on"
+    }
 }

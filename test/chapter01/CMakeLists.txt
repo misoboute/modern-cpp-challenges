@@ -5,6 +5,7 @@ include_directories(${GTEST_INCLUDE_DIRS})
 add_definitions(-DGTEST_LANG_CXX11=1)
 
 set(SOURCES 
+    primenumbers.cpp
     problem01.cpp
 )
 
