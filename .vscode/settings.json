@@ -7,5 +7,8 @@
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "[Log]": {
         "editor.wordWrap": "on"
+    },
+    "files.associations": {
+        "set": "cpp"
     }
 }

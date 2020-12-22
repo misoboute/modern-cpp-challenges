@@ -7,6 +7,10 @@ add_definitions(-DGTEST_LANG_CXX11=1)
 set(SOURCES 
     primenumbers.cpp
     problem01.cpp
+    problem02.cpp
+    problem03.cpp
+    problem04.cpp
+    problem05.cpp
 )
 
 include_directories(${MODCPPCHAL_REPO_ROOT}/include)

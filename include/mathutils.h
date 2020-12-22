@@ -1,5 +1,9 @@
 #pragma once
 
+#include <set>
+
+#include "PrimeNumbers.h"
+
 namespace modcppchal
 {
 namespace math
@@ -15,7 +19,53 @@ T CalcSumDiv3Div5(T n)
 template <typename T>
 T GreatestCommonDivisor(T n, T m)
 {
-    return 0;
+    if (n < m)
+        std::swap(n, m);
+    for (auto t = n % m; t != 0;)
+    {
+        n = m;
+        m = t;
+        t = n % m;
+    }
+    return m;
+}
+
+template <typename T>
+T LeastCommonMultiple(T n, T m)
+{
+    const auto gcd = GreatestCommonDivisor(n, m);
+    return gcd * n / gcd * m / gcd;
+}
+
+template <typename T>
+T LargestPrimeThan(T n)
+{
+    PrimeNumbers<T> primes;
+    int i = 0;
+    while (primes[i] < n) ++i;
+    return primes[i > 0 ? i - 1 : 0];
+}
+
+template <typename T>
+std::set< std::pair<T, T> > SexyPrimePairsUpTo(T n)
+{
+    PrimeNumbers<T> primes;
+    std::set< std::pair<T, T> > sexies;
+    for (T i = 4; ; ++i)
+    {
+        const auto p = primes[i];
+        if (p >= n)
+            break;
+
+        for (int j = i; j > i - 4; --j)
+        {
+            const auto q = primes[j];
+            if (p - q == 6)
+                sexies.emplace_hint(sexies.cend(), q, p);
+                
+        }
+    }
+    return sexies;
 }
 
 }
