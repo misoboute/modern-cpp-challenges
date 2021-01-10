@@ -1,6 +1,6 @@
 include(ExternGoogleTest)
 
-find_package(GTest QUIET)
+find_package(GTest NO_MODULE QUIET)
 
 if (GTest_FOUND)
     add_subdirectory(chapter01)
