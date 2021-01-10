@@ -1,4 +1,4 @@
-include_directories(${MODCPPCHAL_REPO_ROOT}/include)
+include_directories(${MCC_REPO_ROOT}/include)
 
 set(SOURCES
     mathutils.cpp

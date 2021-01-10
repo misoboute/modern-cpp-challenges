@@ -1,4 +1,3 @@
-find_package(GTest REQUIRED)
 find_package(Threads REQUIRED)
 
 include_directories(${GTEST_INCLUDE_DIRS})
@@ -13,7 +12,7 @@ set(SOURCES
     problem05.cpp
 )
 
-include_directories(${MODCPPCHAL_REPO_ROOT}/include)
+include_directories(${MCC_REPO_ROOT}/include)
 
 add_executable(chapter01_test ${SOURCES})
 
