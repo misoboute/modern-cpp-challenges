@@ -5,6 +5,7 @@ set(SOURCES
     problem03.cpp
     problem04.cpp
     problem05.cpp
+    problem06.cpp
 )
 
 include_directories(${MCC_REPO_ROOT}/include)

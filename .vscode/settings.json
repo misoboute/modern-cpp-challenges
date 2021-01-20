@@ -9,6 +9,8 @@
         "editor.wordWrap": "on"
     },
     "files.associations": {
-        "set": "cpp"
+        "set": "cpp",
+        "type_traits": "cpp",
+        "tuple": "cpp"
     }
 }
