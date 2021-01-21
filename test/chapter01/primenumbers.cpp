@@ -15,7 +15,7 @@ struct PrimeNumbersFixture : public Test
     {
     }
 
-    PrimeNumbers<int> m_Primes;
+    PrimeNumbers m_Primes;
 };
 
 TEST_F(PrimeNumbersFixture, IsPrimeReturnFalseForAllNegatives)

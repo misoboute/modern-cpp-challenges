@@ -11,6 +11,7 @@
     "files.associations": {
         "set": "cpp",
         "type_traits": "cpp",
-        "tuple": "cpp"
+        "tuple": "cpp",
+        "cstdint": "cpp"
     }
 }

@@ -6,10 +6,11 @@ set(SOURCES
     problem04.cpp
     problem05.cpp
     problem06.cpp
+    problem07.cpp
 )
 
-include_directories(${MCC_REPO_ROOT}/include)
+include_directories(${MCC_REPO_ROOT}/include/mathutils)
 
 add_executable(chapter01_test ${SOURCES})
 
-target_link_libraries(chapter01_test GTest::gmock_main)
+target_link_libraries(chapter01_test mathutils GTest::gmock_main)
