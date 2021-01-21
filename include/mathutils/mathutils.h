@@ -82,5 +82,23 @@ std::set<T> AbundantNumbersUpTo(T n)
     return result;
 }
 
+template <typename T>
+std::set< std::pair<T, T> > AmicablePairsUpTo(T n)
+{
+    std::set< std::pair<T, T> > result;
+
+    IntDivisors divs;
+    for (T i = 6; i < n; ++i)
+    {
+        const auto sumDivI = divs.GetSumOfProperDivisors(i);
+        if (sumDivI < n && sumDivI > i && 
+            divs.GetSumOfProperDivisors(sumDivI) == i)
+        {
+            result.emplace_hint(result.cend(), i, sumDivI);
+        }
+    }
+    return result;
+}
+
 }
 }
