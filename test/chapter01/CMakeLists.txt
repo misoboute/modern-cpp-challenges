@@ -8,6 +8,7 @@ set(SOURCES
     problem06.cpp
     problem07.cpp
     problem08.cpp
+    problem09.cpp
 )
 
 include_directories(${MCC_REPO_ROOT}/include/mathutils)
